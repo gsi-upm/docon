@@ -1,0 +1,2 @@
+{% set f = open_file('raw') %}
+{% for line in f %}{{ line }}{% endfor %}

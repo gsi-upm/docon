@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block extra_js %}
+    <script>
+        window.onload = function() {
+            var inputtext = document.getElementById("inputtext");
+            var inputfile = document.getElementById("inputfile");
+            var intype = document.getElementById("intype");
+            console.log("tweakform", intype);
+            intype.onchange = function(){
+                if( intype.value === 'file'){
+                    console.log("Choosing file");
+                    inputfile.parentNode.style.display = 'inline';
+                    inputfile.removeAttribute("disabled");
+                    inputtext.parentNode.style.display = 'none';
+                    inputtext.setAttribute("disabled", true);
+                }else{
+                    console.log("Choosing text");
+                    inputfile.setAttribute("disabled", true);
+                    inputfile.parentNode.style.display = 'none';
+                    inputtext.removeAttribute("disabled");
+                    inputtext.parentNode.style.display = 'inline';
+                }
+            }
+        }
+    </script>
+{% endblock %}
+{% block main %}
+<h1>Eurosentiment format translation</h1>
+<form action="{{ url_for('frontend.process') }}" method="post" enctype="multipart/form-data">
+
+    <div><label for="template">Template used</label>
+        <select class="css_class" id="template" name="template">
+            {% for template in templates %}
+            <option value="{{ template.name }}">{{ template.name }}</option></select>
+            {% endfor %}
+    </div>
+    <div><label>Text input</label><input id="inputtext" type="text" name="input"></input></div>
+    <div><label>File input</label><input id="inputfile" type="file" name="input"></input></div>
+    <div><label for="intype">Input Type</label> <select id="intype" name="intype">
+            <option selected="" value="file">File</option>
+            <option value="url">Specify the file URL</option>
+            <option value="direct">Direct</option></select>
+    </div>
+    <div><label for="informat">Input format</label>
+        <select id="informat" name="informat">
+            {% for informat in informats %}
+            <option value="{{ informat.name }}">{{ informat.name }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div><label for="outformat">Output format</label>
+        <select id="outformat" name="outformat">
+            {% for outformat in outformats %}
+            <option value="{{ outformat[0] }}">{{ outformat[1] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div><label for="language">Language</label>
+        <select id="language" name="language">
+            <option value="">-- Select a language--</option>
+            {% for language in languages %}
+            <option value="{{ language[0] }}">{{ language[1] }}</option>
+            {% endfor %}
+        </select>
+    </div>
+<input type="submit" value="Submit" />
+</form>
+
+{% endblock %}

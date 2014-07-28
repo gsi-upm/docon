@@ -1,0 +1,2 @@
+{% set file=open_file() %}
+{% for line in file.readlines() %}{{ loop.index }} - {{ line }}{% endfor %}

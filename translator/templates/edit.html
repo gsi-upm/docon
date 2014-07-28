@@ -1,0 +1,23 @@
+{% extends 'admin/model/edit.html' %}
+ 
+{% block tail %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename="css/codemirror.css" )}}"></link>
+    <style type="text/css">.CodeMirror { border: 1px solid black;}</style>
+    <script src="{{ url_for('static', filename="js/codemirror.js") }}"></script>
+    <script src="{{ url_for('static', filename="js/mode/jinja2/jinja2.js") }}"></script>
+    <script>
+      var elements = document.getElementsByClassName("cmeditor");
+      for(el in elements){
+        console.log("CodeMirror:", elements[el]);
+        var cm = CodeMirror.fromTextArea(elements[el], {
+                lineNumbers: true,
+                lineWrapping: false,
+                column: 80,
+                width: "10em",
+                mode: {name: "jinja2", htmlMode: true}
+                });
+        cm.setOption("lineWrapping", true);
+      }
+    </script>
+{% endblock %}

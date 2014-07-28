@@ -1,0 +1,10 @@
+{% set file = open_file('xls') %}
+{% set sheet=file.sheet_by_index(0) %}
+{{ sheet.name }}
+----
+{% for i in range(0, sheet.nrows) %}
+{% set row = sheet.row_values(i) %}
+{% for value in row %}
+{{ value }}
+{% endfor %}
+{% endfor %}
