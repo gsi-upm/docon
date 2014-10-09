@@ -3,6 +3,8 @@ import time
 import unittest
 import tempfile
 import StringIO
+import difflib
+import codecs
 from translator.utils import translate_document
 from functools import partial
 from os import listdir
@@ -27,14 +29,17 @@ def testOpen():
 
 def check_case(case):
     case = join(TEST_PATH, 'cases',  case)
-    with open(case + ".template", 'r') as f:
+    with codecs.open(case + ".template", 'r') as f:
         template = f.read()
     stream = translate_document(case+".input", template)
     real_output = "".join(item for item in stream)
     print "Real: '{}'".format(real_output)
-    with open(case+".output", 'r') as f:
+    with codecs.open(case+".output", 'r') as f:
         expected_output = f.read()
     print "Expected: '{}'".format(expected_output)
+
+    diff = difflib.unified_diff(real_output, expected_output)
+    print("Difference:\n{}".format("".join(diff)))
     assert real_output.strip() == expected_output.strip()
 
 if __name__ == '__main__':

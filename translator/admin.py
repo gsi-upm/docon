@@ -32,6 +32,8 @@ class CMTextAreaField(wtf.fields.TextAreaField):
 class EuTemplateView(PrivateModelView):
     column_filters = ['name']
 
+    column_exclude_list = ("text", )
+
     create_template = 'edit.html'
     edit_template = 'edit.html'
 
@@ -124,8 +126,8 @@ class UserView(AdminModelView):
 
 def make_admin(app):
     myadmin = Admin(app, index_view=MyAdminIndexView(),
-                    base_template='my_master.html',
-                    template_mode='bootstrap3')
+                    base_template='my_master.html',)
+                    #template_mode='bootstrap3')
     myadmin.add_view(EuFormatView(models.EuFormat))
     myadmin.add_view(EuTemplateView(models.EuTemplate))
     myadmin.add_view(TranslationRequestView(models.TranslationRequest))

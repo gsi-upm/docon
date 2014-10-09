@@ -1,0 +1,90 @@
+    
+<test#MachineAnnotated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.gsi.dit.upm.es/ontologies/marl/ns#SentimentAnalysis> .
+<test#MachineAnnotated> <http://purl.org/dc/terms/language> <http://www.gsi.dit.upm.es/ontologies/marl/ns#SentimentAnalysis> .
+<test#MachineAnnotated> <http://www.gsi.dit.upm.es/ontologies/marl/ns#maxPolarityValue> "10.0" .
+<test#MachineAnnotated> <http://www.gsi.dit.upm.es/ontologies/marl/ns#minPolarityValue> "0.0" .
+<test#MachineAnnotated> <http://www.w3.org/ns/prov#wasAssociatedWith> <http://eurosentiment.eu/ns#agent> .
+
+
+
+<test#Context1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> .
+<test#Context1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
+<test#Context1> <http://www.gsi.dit.upm.es/ontologies/marl/ns#hasOpinion> <test#Opinion1> .
+<test#Context1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> "This is a test" .
+ 
+<test#Opinion1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.gsi.dit.upm.es/ontologies/marl/ns#Opinion> .
+<test#Opinion1> <http://www.w3.org/ns/prov#wasGeneratedBy> <test#MachineAnnotated> .
+<test#Opinion1> <http://www.gsi.dit.upm.es/ontologies/marl/ns#polarityValue> "0.1" .
+
+<test#Opinion1> <http://www.gsi.dit.upm.es/ontologies/marl/ns#hasPolarity> <http://www.gsi.dit.upm.es/ontologies/marl/ns#Negative> .
+
+
+<test#String1_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
+<test#String1_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <test#Context1> .
+<test#String1_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> "This" .
+<test#String1_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#posTag> "PR" .
+<test#String1_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lemma> "this" .
+
+<test#String1_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
+<test#String1_2> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <test#Context1> .
+<test#String1_2> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> "is" .
+<test#String1_2> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#posTag> "V" .
+<test#String1_2> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lemma> "be" .
+<test#String1_2> <http://eurosentiment.eu/ns#synset> "10"
+
+<test#String1_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
+<test#String1_3> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <test#Context1> .
+<test#String1_3> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> "a" .
+<test#String1_3> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#posTag> "AR" .
+<test#String1_3> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lemma> "a" .
+
+<test#String1_4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
+<test#String1_4> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <test#Context1> .
+<test#String1_4> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> "test" .
+<test#String1_4> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#posTag> "N" .
+<test#String1_4> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lemma> "test" .
+
+
+<test#Context2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> .
+<test#Context2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
+<test#Context2> <http://www.gsi.dit.upm.es/ontologies/marl/ns#hasOpinion> <test#Opinion2> .
+<test#Context2> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> "This is not a test" .
+ 
+<test#Opinion2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.gsi.dit.upm.es/ontologies/marl/ns#Opinion> .
+<test#Opinion2> <http://www.w3.org/ns/prov#wasGeneratedBy> <test#MachineAnnotated> .
+<test#Opinion2> <http://www.gsi.dit.upm.es/ontologies/marl/ns#polarityValue> "0.1" .
+
+<test#Opinion2> <http://www.gsi.dit.upm.es/ontologies/marl/ns#hasPolarity> <http://www.gsi.dit.upm.es/ontologies/marl/ns#Negative> .
+
+
+<test#String2_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
+<test#String2_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <test#Context2> .
+<test#String2_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> "This" .
+<test#String2_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#posTag> "PR" .
+<test#String2_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lemma> "this" .
+
+<test#String2_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
+<test#String2_2> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <test#Context2> .
+<test#String2_2> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> "is" .
+<test#String2_2> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#posTag> "V" .
+<test#String2_2> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lemma> "be" .
+<test#String2_2> <http://eurosentiment.eu/ns#synset> "10"
+
+<test#String2_3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
+<test#String2_3> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <test#Context2> .
+<test#String2_3> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> "not" .
+<test#String2_3> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#posTag> "MOD" .
+<test#String2_3> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lemma> "not" .
+
+<test#String2_4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
+<test#String2_4> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <test#Context2> .
+<test#String2_4> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> "a" .
+<test#String2_4> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#posTag> "AR" .
+<test#String2_4> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lemma> "a" .
+
+<test#String2_5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
+<test#String2_5> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <test#Context2> .
+<test#String2_5> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> "test" .
+<test#String2_5> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#posTag> "N" .
+<test#String2_5> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lemma> "test" .
+                                 

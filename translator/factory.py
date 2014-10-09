@@ -1,6 +1,7 @@
 from flask import Flask, current_app, has_app_context
 from celery import Celery
 from celery.utils.log import get_task_logger
+from .utils import ReverseProxied
 import logging
 import os
 logger = logging.getLogger(__name__)
@@ -8,6 +9,7 @@ logger = logging.getLogger(__name__)
 def create_app(config_filename='config.py', settings_override=None):
     logger.info("Creating app")
     app = Flask(__name__)
+    app.wsgi_app = ReverseProxied(app.wsgi_app)
     config_path = os.path.abspath(config_filename)
     if not os.path.isfile(config_path):
         config_path = config_filename

@@ -3,11 +3,11 @@
 {% block extra_js %}
     <script>
         window.onload = function() {
+            var intype = document.getElementById("intype");
             var inputtext = document.getElementById("inputtext");
             var inputfile = document.getElementById("inputfile");
-            var intype = document.getElementById("intype");
-            console.log("tweakform", intype);
-            intype.onchange = function(){
+            function setValues(){
+                console.log("tweakform", intype);
                 if( intype.value === 'file'){
                     console.log("Choosing file");
                     inputfile.parentNode.style.display = 'inline';
@@ -22,6 +22,8 @@
                     inputtext.parentNode.style.display = 'inline';
                 }
             }
+            setValues();
+            intype.onchange = setValues;
         }
     </script>
 {% endblock %}
@@ -29,19 +31,13 @@
 <h1>Eurosentiment format translation</h1>
 <form action="{{ url_for('frontend.process') }}" method="post" enctype="multipart/form-data">
 
-    <div><label for="template">Template used</label>
-        <select class="css_class" id="template" name="template">
-            {% for template in templates %}
-            <option value="{{ template.name }}">{{ template.name }}</option></select>
-            {% endfor %}
-    </div>
-    <div><label>Text input</label><input id="inputtext" type="text" name="input"></input></div>
-    <div><label>File input</label><input id="inputfile" type="file" name="input"></input></div>
     <div><label for="intype">Input Type</label> <select id="intype" name="intype">
             <option selected="" value="file">File</option>
             <option value="url">Specify the file URL</option>
             <option value="direct">Direct</option></select>
     </div>
+    <div><label>Text input</label><input id="inputtext" type="text" name="input"></input></div>
+    <div><label>File input</label><input id="inputfile" type="file" name="input"></input></div>
     <div><label for="informat">Input format</label>
         <select id="informat" name="informat">
             {% for informat in informats %}
@@ -64,6 +60,8 @@
             {% endfor %}
         </select>
     </div>
+    <div><label>Base URI:</label><input id="base" type="text" name="base"></input></div>
+    <div><label>Timeout:</label><input id="timeout" type="number" name="timeout"></input></div>
 <input type="submit" value="Submit" />
 </form>
 

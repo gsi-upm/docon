@@ -1,0 +1,402 @@
+2014-09-25 10:20:21,214 - translator.factory - INFO - Creating app
+2014-09-25 10:20:21,214 - translator.factory - INFO - Creating app
+2014-09-25 10:20:21,215 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-25 10:20:21,215 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-25 10:20:21,219 - translator.factory - INFO - Creating app
+2014-09-25 10:20:21,221 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-25 10:20:21,221 - translator.factory - INFO - Creating app
+2014-09-25 10:20:21,222 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-25 10:20:23,254 - translator.factory - DEBUG - Creating celery app
+2014-09-25 10:20:23,254 - translator.factory - DEBUG - Using current flask app
+2014-09-25 10:20:23,255 - translator.factory - DEBUG - Creating celery app
+2014-09-25 10:20:23,256 - translator.factory - DEBUG - Creating celery app
+2014-09-25 10:20:23,256 - translator.factory - DEBUG - Using current flask app
+2014-09-25 10:20:23,256 - translator.factory - DEBUG - Using current flask app
+2014-09-25 10:20:23,256 - translator.factory - DEBUG - Creating celery app
+2014-09-25 10:20:23,257 - translator.factory - DEBUG - Using current flask app
+2014-09-25 10:21:26,844 - translator.views - INFO - Processing: {'outformat': u'json-ld', 'template': u'ESMA2NIF', 'baseuri': u'', 'intype': u'file', 'informat': u'ES_MA', 'timeout': u'', 'input': <FileStorage: u'CarsCarsG199.xls' ('application/vnd.ms-excel')>, 'urischeme': 'RFC5147String'}
+2014-09-25 10:21:27,685 - translator.factory - WARNING - TR id: 5423d087f4c079250505472d
+2014-09-25 10:21:27,692 - translator - DEBUG - PROCESSING!!
+2014-09-25 10:21:27,693 - translator - DEBUG - DATA!! SON([('_id', ObjectId('5423d087f4c079250505472d')), ('template', ObjectId('53f5b278f4c079097d8742ad')), ('intype', u'file'), ('infile', ObjectId('5423d087f4c079250505472b')), ('informat', ObjectId('53f5b22cf4c079097f72956d')), ('outformat', u'json-ld'), ('baseuri', u''), ('ip', u'127.0.0.1'), ('status', u'pending'), ('requested', datetime.datetime(2014, 9, 25, 10, 21, 26, 930000)), ('started', datetime.datetime(2014, 9, 25, 10, 21, 27, 688217))])
+2014-09-25 10:21:27,936 - translator - DEBUG - Opening file: <gridfs.grid_file.GridOut object at 0x22561d0>
+2014-09-25 10:21:28,123 - translator - DEBUG - An office file!
+2014-09-25 10:21:28,316 - translator.factory - WARNING - Processed
+2014-09-25 10:21:28,317 - translator.views - INFO - Getting result for 5423d087f4c079250505472d
+2014-09-25 10:21:28,323 - translator.views - DEBUG - Got response
+2014-09-25 10:22:14,559 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': u'', 'intype': u'file', 'informat': u'ES_MA', 'timeout': u'', 'input': <FileStorage: u'CarsCarsG199.xls' ('application/vnd.ms-excel')>, 'urischeme': 'RFC5147String'}
+2014-09-25 10:22:14,657 - translator.factory - WARNING - TR id: 5423d0b6f4c07925024338a0
+2014-09-25 10:22:14,664 - translator - DEBUG - PROCESSING!!
+2014-09-25 10:22:14,665 - translator - DEBUG - DATA!! SON([('_id', ObjectId('5423d0b6f4c07925024338a0')), ('template', ObjectId('53f5d1bdf4c0790e74ef7269')), ('intype', u'file'), ('infile', ObjectId('5423d0b6f4c079250243389e')), ('informat', ObjectId('53f5b22cf4c079097f72956d')), ('outformat', u'nt'), ('baseuri', u''), ('ip', u'127.0.0.1'), ('status', u'pending'), ('requested', datetime.datetime(2014, 9, 25, 10, 22, 14, 567000)), ('started', datetime.datetime(2014, 9, 25, 10, 22, 14, 660002))])
+2014-09-25 10:22:14,749 - translator - DEBUG - Opening file: <gridfs.grid_file.GridOut object at 0x24d8450>
+2014-09-25 10:22:14,764 - translator - DEBUG - An office file!
+2014-09-25 10:22:15,020 - translator.factory - WARNING - Processed
+2014-09-25 10:22:15,021 - translator.views - INFO - Getting result for 5423d0b6f4c07925024338a0
+2014-09-25 10:22:15,030 - translator.views - DEBUG - Got response
+2014-09-30 09:57:51,171 - translator.factory - ERROR - Exception on /process [POST]
+Traceback (most recent call last):
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/eurosentiment-translator/translator/views.py", line 102, in process
+    if params["language"] == "":
+KeyError: 'language'
+2014-09-30 10:00:13,530 - translator.factory - ERROR - Exception on /process [POST]
+Traceback (most recent call last):
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/eurosentiment-translator/translator/views.py", line 102, in process
+    if params["language"] == "":
+KeyError: 'language'
+2014-09-30 10:00:39,809 - translator.factory - ERROR - Exception on /process [POST]
+Traceback (most recent call last):
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/eurosentiment-translator/translator/views.py", line 102, in process
+    if params["language"] == "":
+KeyError: 'language'
+2014-09-30 10:02:14,087 - translator.factory - ERROR - Exception on /process [POST]
+Traceback (most recent call last):
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/eurosentiment-translator/translator/views.py", line 102, in process
+    if params["language"] == "":
+KeyError: 'language'
+2014-09-30 10:08:02,129 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': u'', 'intype': u'file', 'informat': u'ES_MA', 'timeout': u'', 'input': <FileStorage: u'FinanceA1.xls' ('application/vnd.ms-excel')>, 'urischeme': 'RFC5147String'}
+2014-09-30 10:08:03,381 - translator.factory - WARNING - TR id: 542a64e3f4c079250497ffbf
+2014-09-30 10:08:03,426 - translator - DEBUG - PROCESSING!!
+2014-09-30 10:08:03,427 - translator - DEBUG - DATA!! SON([('_id', ObjectId('542a64e3f4c079250497ffbf')), ('template', ObjectId('53f5d1bdf4c0790e74ef7269')), ('intype', u'file'), ('infile', ObjectId('542a64e2f4c079250497ffba')), ('informat', ObjectId('53f5b22cf4c079097f72956d')), ('outformat', u'nt'), ('baseuri', u''), ('ip', u'127.0.0.1'), ('status', u'pending'), ('requested', datetime.datetime(2014, 9, 30, 10, 8, 2, 158000)), ('started', datetime.datetime(2014, 9, 30, 10, 8, 3, 383874))])
+2014-09-30 10:08:03,525 - translator - DEBUG - Opening file: <gridfs.grid_file.GridOut object at 0x23da450>
+2014-09-30 10:08:03,540 - translator - DEBUG - An office file!
+2014-09-30 10:08:06,459 - translator.factory - WARNING - Processed
+2014-09-30 10:08:06,460 - translator.views - INFO - Getting result for 542a64e3f4c079250497ffbf
+2014-09-30 10:08:06,465 - translator.views - DEBUG - Got response
+2014-09-30 10:08:17,987 - translator.factory - ERROR - Exception on /process [POST]
+Traceback (most recent call last):
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/eurosentiment-translator/translator/views.py", line 102, in process
+    if params["language"] == "":
+KeyError: 'language'
+2014-09-30 10:10:09,443 - translator.factory - INFO - Creating app
+2014-09-30 10:10:09,448 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 10:10:09,511 - translator.factory - INFO - Creating app
+2014-09-30 10:10:09,513 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 10:10:09,555 - translator.factory - INFO - Creating app
+2014-09-30 10:10:09,566 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 10:10:09,593 - translator.factory - DEBUG - Creating celery app
+2014-09-30 10:10:09,594 - translator.factory - DEBUG - Using current flask app
+2014-09-30 10:10:09,642 - translator.factory - DEBUG - Creating celery app
+2014-09-30 10:10:09,642 - translator.factory - DEBUG - Using current flask app
+2014-09-30 10:10:09,655 - translator.factory - INFO - Creating app
+2014-09-30 10:10:09,660 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 10:10:09,673 - translator.factory - DEBUG - Creating celery app
+2014-09-30 10:10:09,682 - translator.factory - DEBUG - Using current flask app
+2014-09-30 10:10:09,758 - translator.factory - DEBUG - Creating celery app
+2014-09-30 10:10:09,759 - translator.factory - DEBUG - Using current flask app
+2014-09-30 10:10:17,024 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 10:10:17,247 - translator.views - INFO - Async
+2014-09-30 10:10:22,443 - translator.views - INFO - Getting result for 542a6569f4c0797a9cad5973
+2014-09-30 10:10:22,449 - translator.views - DEBUG - Got response
+2014-09-30 10:11:56,517 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': u'', 'intype': u'file', 'informat': u'ES_MA', 'timeout': u'', 'input': <FileStorage: u'FinanceA1.xls' ('application/vnd.ms-excel')>, 'urischeme': 'RFC5147String'}
+2014-09-30 10:11:57,227 - translator.factory - WARNING - TR id: 542a65cdf4c0797a97454853
+2014-09-30 10:11:57,233 - translator - DEBUG - PROCESSING!!
+2014-09-30 10:11:57,233 - translator - DEBUG - DATA!! SON([('_id', ObjectId('542a65cdf4c0797a97454853')), ('template', ObjectId('53f5d1bdf4c0790e74ef7269')), ('intype', u'file'), ('infile', ObjectId('542a65ccf4c0797a9745484e')), ('informat', ObjectId('53f5b22cf4c079097f72956d')), ('outformat', u'nt'), ('baseuri', u''), ('ip', u'127.0.0.1'), ('status', u'pending'), ('requested', datetime.datetime(2014, 9, 30, 10, 11, 56, 520000)), ('started', datetime.datetime(2014, 9, 30, 10, 11, 57, 230089))])
+2014-09-30 10:11:57,337 - translator - DEBUG - Opening file: <gridfs.grid_file.GridOut object at 0x364c710>
+2014-09-30 10:11:57,348 - translator - DEBUG - An office file!
+2014-09-30 10:12:00,884 - translator.factory - WARNING - Processed
+2014-09-30 10:12:00,885 - translator.views - INFO - Getting result for 542a65cdf4c0797a97454853
+2014-09-30 10:12:00,889 - translator.views - DEBUG - Got response
+2014-09-30 11:21:10,938 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 11:21:12,037 - translator.views - INFO - Async
+2014-09-30 11:21:16,106 - translator.views - INFO - Getting result for 542a7608f4c0797a9633d3aa
+2014-09-30 11:21:16,113 - translator.views - DEBUG - Got response
+2014-09-30 11:57:59,838 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 11:58:00,420 - translator.views - INFO - Async
+2014-09-30 11:58:05,976 - translator.views - INFO - Getting result for 542a7ea8f4c0797a9520c816
+2014-09-30 11:58:05,981 - translator.views - DEBUG - Got response
+2014-09-30 12:02:16,419 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:02:17,792 - translator.views - INFO - Async
+2014-09-30 12:02:30,374 - translator.views - INFO - Getting result for 542a7fa9f4c0797a97454866
+2014-09-30 12:02:30,380 - translator.views - DEBUG - Got response
+2014-09-30 12:04:48,629 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA37.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:04:50,778 - translator.views - INFO - Async
+2014-09-30 12:04:59,806 - translator.views - INFO - Getting result for 542a8042f4c0797a9633d3b0
+2014-09-30 12:04:59,812 - translator.views - DEBUG - Got response
+2014-09-30 12:06:06,236 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': u'myexample.com', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:06:07,549 - translator.views - INFO - Async
+2014-09-30 12:06:18,582 - translator.views - INFO - Getting result for 542a808ff4c0797a9633d3b7
+2014-09-30 12:06:18,586 - translator.views - DEBUG - Got response
+2014-09-30 12:19:34,009 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'MusicA4.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:19:35,347 - translator.views - INFO - Async
+2014-09-30 12:19:37,359 - translator.views - INFO - Getting result for 542a83b7f4c0797a9633d3bb
+2014-09-30 12:19:37,365 - translator.views - DEBUG - Got response
+2014-09-30 12:19:59,040 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'MusicA4.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:19:59,050 - translator.views - INFO - Async
+2014-09-30 12:20:00,558 - translator.views - INFO - Getting result for 542a83cff4c0797a9633d3bf
+2014-09-30 12:20:00,563 - translator.views - DEBUG - Got response
+2014-09-30 12:20:05,923 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'MusicA4.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:20:06,243 - translator.views - INFO - Async
+2014-09-30 12:20:10,512 - translator.views - INFO - Getting result for 542a83d6f4c0797a9cad5977
+2014-09-30 12:20:10,518 - translator.views - DEBUG - Got response
+2014-09-30 12:26:46,901 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'PharmaceuticalA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:26:50,251 - translator.views - INFO - Async
+2014-09-30 12:26:57,276 - translator.views - INFO - Getting result for 542a856af4c0797a9cad597d
+2014-09-30 12:26:57,281 - translator.views - DEBUG - Got response
+2014-09-30 12:31:55,994 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'PostC21.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:31:58,927 - translator.views - INFO - Async
+2014-09-30 12:32:05,861 - translator.views - INFO - Getting result for 542a869ef4c0797a9745486d
+2014-09-30 12:32:05,865 - translator.views - DEBUG - Got response
+2014-09-30 12:33:45,109 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:33:45,859 - translator.views - INFO - Async
+2014-09-30 12:33:51,878 - translator.views - INFO - Getting result for 542a8709f4c0797a97454874
+2014-09-30 12:33:51,882 - translator.views - DEBUG - Got response
+2014-09-30 12:34:03,044 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': u'myexample.com', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:34:04,854 - translator.views - INFO - Async
+2014-09-30 12:34:13,365 - translator.views - INFO - Getting result for 542a871cf4c0797a9745487b
+2014-09-30 12:34:13,370 - translator.views - DEBUG - Got response
+2014-09-30 12:35:37,392 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'Swiss-NewsA4.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:35:47,860 - translator.views - INFO - Async
+2014-09-30 12:36:06,258 - translator.factory - INFO - Creating app
+2014-09-30 12:36:06,259 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:36:06,322 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:36:06,323 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:37:14,926 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'Swiss-NewsA4.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:37:19,624 - translator.views - INFO - Async
+2014-09-30 12:37:43,245 - translator.factory - INFO - Creating app
+2014-09-30 12:37:43,246 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:37:43,311 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:37:43,311 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:38:58,826 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:39:00,025 - translator.views - INFO - Async
+2014-09-30 12:39:04,085 - translator.views - INFO - Getting result for 542a8844f4c07940695e1449
+2014-09-30 12:39:04,092 - translator.views - DEBUG - Got response
+2014-09-30 12:39:55,727 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'SwissNewsA4.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:39:59,444 - translator.views - INFO - Async
+2014-09-30 12:40:39,277 - translator.factory - INFO - Creating app
+2014-09-30 12:40:39,279 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:40:39,342 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:40:39,343 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:41:29,862 - translator.factory - ERROR - Exception on /process [POST]
+Traceback (most recent call last):
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1817, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1477, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1381, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1475, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/flask/app.py", line 1461, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/var/www/eurosentiment-translator/translator/views.py", line 107, in process
+    outformat=params["outformat"]).name
+  File "/var/www/eurosentiment-translator/venv/local/lib/python2.7/site-packages/mongoengine/queryset/base.py", line 186, in get
+    raise queryset._document.DoesNotExist(msg)
+DoesNotExist: EuTemplate matching query does not exist.
+2014-09-30 12:42:18,554 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:42:19,483 - translator.views - INFO - Async
+2014-09-30 12:42:22,743 - translator.views - INFO - Getting result for 542a890bf4c07942fea29c5c
+2014-09-30 12:42:22,750 - translator.views - DEBUG - Got response
+2014-09-30 12:42:50,570 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:42:50,875 - translator.views - INFO - Async
+2014-09-30 12:42:53,888 - translator.views - INFO - Getting result for 542a892af4c0797a9cad5984
+2014-09-30 12:42:53,893 - translator.views - DEBUG - Got response
+2014-09-30 12:43:05,061 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': u'myexample.com', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:43:06,218 - translator.views - INFO - Async
+2014-09-30 12:43:08,729 - translator.views - INFO - Getting result for 542a893af4c0797a9cad598b
+2014-09-30 12:43:08,734 - translator.views - DEBUG - Got response
+2014-09-30 12:44:04,911 - translator.factory - INFO - Creating app
+2014-09-30 12:44:04,912 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:44:04,986 - translator.factory - INFO - Creating app
+2014-09-30 12:44:04,993 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:44:05,010 - translator.factory - INFO - Creating app
+2014-09-30 12:44:05,011 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:44:05,052 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:44:05,053 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:44:05,110 - translator.factory - INFO - Creating app
+2014-09-30 12:44:05,111 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:44:05,135 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:44:05,148 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:44:05,202 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:44:05,202 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:44:05,301 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:44:05,301 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:44:10,725 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': u'myexample.com', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:44:11,906 - translator.views - INFO - Async
+2014-09-30 12:44:15,467 - translator.views - INFO - Getting result for 542a897bf4c079438b3359c1
+2014-09-30 12:44:15,473 - translator.views - DEBUG - Got response
+2014-09-30 12:44:19,258 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:44:20,429 - translator.views - INFO - Async
+2014-09-30 12:44:23,483 - translator.views - INFO - Getting result for 542a8984f4c079438c14a9e5
+2014-09-30 12:44:23,489 - translator.views - DEBUG - Got response
+2014-09-30 12:45:23,448 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'default', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:45:24,272 - translator.views - INFO - Async
+2014-09-30 12:45:27,327 - translator.views - INFO - Getting result for 542a89c4f4c0794389de80bc
+2014-09-30 12:45:27,333 - translator.views - DEBUG - Got response
+2014-09-30 12:47:01,650 - translator.factory - INFO - Creating app
+2014-09-30 12:47:01,652 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:47:01,861 - translator.factory - INFO - Creating app
+2014-09-30 12:47:01,879 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:47:01,939 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:47:01,939 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:47:02,062 - translator.factory - INFO - Creating app
+2014-09-30 12:47:02,063 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:47:02,085 - translator.factory - INFO - Creating app
+2014-09-30 12:47:02,086 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:47:02,094 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:47:02,095 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:47:02,328 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:47:02,329 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:47:02,436 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:47:02,444 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:47:04,745 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'FinanceA1.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:47:05,183 - translator.views - INFO - Async
+2014-09-30 12:47:08,740 - translator.views - INFO - Getting result for 542a8a29f4c0794670ae6113
+2014-09-30 12:47:08,746 - translator.views - DEBUG - Got response
+2014-09-30 12:51:23,461 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'SwissNewsA4.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:51:28,366 - translator.views - INFO - Async
+2014-09-30 12:51:38,946 - translator.views - INFO - Getting result for 542a8b30f4c079467767006c
+2014-09-30 12:51:38,952 - translator.views - DEBUG - Got response
+2014-09-30 12:51:52,217 - translator.factory - INFO - Creating app
+2014-09-30 12:51:52,218 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:51:52,283 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:51:52,283 - translator.factory - DEBUG - Using current flask app
+2014-09-30 12:53:54,639 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'TechnologyA12.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 12:53:57,337 - translator.views - INFO - Async
+2014-09-30 12:54:06,924 - translator.views - INFO - Getting result for 542a8bc5f4c07949339f2270
+2014-09-30 12:54:06,930 - translator.views - DEBUG - Got response
+2014-09-30 12:54:23,201 - translator.factory - INFO - Creating app
+2014-09-30 12:54:23,202 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 12:54:23,259 - translator.factory - DEBUG - Creating celery app
+2014-09-30 12:54:23,260 - translator.factory - DEBUG - Using current flask app
+2014-09-30 13:35:44,268 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'8dcceacd-13c8-408f-8c93-4c6c893bcc98.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 13:35:44,418 - translator.views - INFO - Async
+2014-09-30 13:35:46,478 - translator.views - INFO - Getting result for 542a9590f4c07949704bf113
+2014-09-30 13:35:46,484 - translator.views - DEBUG - Got response
+2014-09-30 13:36:11,233 - translator.factory - INFO - Creating app
+2014-09-30 13:36:11,234 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 13:36:11,299 - translator.factory - DEBUG - Creating celery app
+2014-09-30 13:36:11,299 - translator.factory - DEBUG - Using current flask app
+2014-09-30 13:38:17,863 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'e0207038-aa7a-42fe-be2f-d0f39d3b73d8.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 13:38:17,944 - translator.views - INFO - Async
+2014-09-30 13:38:19,502 - translator.views - INFO - Getting result for 542a9629f4c07946718f28ba
+2014-09-30 13:38:19,509 - translator.views - DEBUG - Got response
+2014-09-30 13:39:53,938 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'4e9aacff-8ead-42cb-b8ae-0e521773c86b.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 13:39:54,047 - translator.views - INFO - Async
+2014-09-30 13:39:56,057 - translator.views - INFO - Getting result for 542a968af4c07946718f28c0
+2014-09-30 13:39:56,062 - translator.views - DEBUG - Got response
+2014-09-30 13:42:24,763 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'965162fe-fa60-4333-90ff-b3a95e84f9be.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 13:42:25,081 - translator.views - INFO - Async
+2014-09-30 13:42:27,593 - translator.views - INFO - Getting result for 542a9721f4c07946718f28c7
+2014-09-30 13:42:27,598 - translator.views - DEBUG - Got response
+2014-09-30 13:42:52,224 - translator.factory - INFO - Creating app
+2014-09-30 13:42:52,225 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 13:42:52,288 - translator.factory - DEBUG - Creating celery app
+2014-09-30 13:42:52,288 - translator.factory - DEBUG - Using current flask app
+2014-09-30 13:45:31,272 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'820d5b2d-bdef-4adb-a3f0-83ecdf1bb47e.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 13:45:32,141 - translator.views - INFO - Async
+2014-09-30 13:45:45,229 - translator.views - INFO - Getting result for 542a97dcf4c0795ecd8e98c6
+2014-09-30 13:45:45,235 - translator.views - DEBUG - Got response
+2014-09-30 13:45:57,225 - translator.factory - INFO - Creating app
+2014-09-30 13:45:57,226 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 13:45:57,289 - translator.factory - DEBUG - Creating celery app
+2014-09-30 13:45:57,290 - translator.factory - DEBUG - Using current flask app
+2014-09-30 13:47:46,804 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'8d07e455-0284-4ca2-82fd-4aa908468cd6.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 13:47:47,636 - translator.views - INFO - Async
+2014-09-30 13:47:56,209 - translator.views - INFO - Getting result for 542a9863f4c0796164a66a6d
+2014-09-30 13:47:56,215 - translator.views - DEBUG - Got response
+2014-09-30 13:48:11,228 - translator.factory - INFO - Creating app
+2014-09-30 13:48:11,230 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 13:48:11,294 - translator.factory - DEBUG - Creating celery app
+2014-09-30 13:48:11,294 - translator.factory - DEBUG - Using current flask app
+2014-09-30 15:23:16,890 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'MusicHumanA0.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 15:23:17,339 - translator.views - INFO - Async
+2014-09-30 15:23:19,903 - translator.views - INFO - Getting result for 542aaec5f4c0794676eb0b48
+2014-09-30 15:23:19,908 - translator.views - DEBUG - Got response
+2014-09-30 15:43:19,159 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'MusicHumanA13.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 15:43:19,207 - translator.views - INFO - Async
+2014-09-30 15:43:20,216 - translator.views - INFO - Getting result for 542ab377f4c0794670ae6117
+2014-09-30 15:43:20,221 - translator.views - DEBUG - Got response
+2014-09-30 15:56:34,191 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'b4e046ce-36d9-4574-b8e6-1b108318bde0.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 15:56:34,546 - translator.views - INFO - Async
+2014-09-30 15:56:37,561 - translator.views - INFO - Getting result for 542ab692f4c0794670ae611d
+2014-09-30 15:56:37,566 - translator.views - DEBUG - Got response
+2014-09-30 15:57:01,192 - translator.factory - INFO - Creating app
+2014-09-30 15:57:01,193 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 15:57:01,244 - translator.factory - DEBUG - Creating celery app
+2014-09-30 15:57:01,245 - translator.factory - DEBUG - Using current flask app
+2014-09-30 16:00:10,465 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'58272f38-052b-4536-a448-49c519ee9a95.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 16:00:10,531 - translator.views - INFO - Async
+2014-09-30 16:00:11,591 - translator.views - INFO - Getting result for 542ab76af4c07963a53423b3
+2014-09-30 16:00:11,598 - translator.views - DEBUG - Got response
+2014-09-30 16:01:56,442 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'21874f7a-716d-4943-9a4c-086e5d222edf.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 16:01:59,360 - translator.views - INFO - Async
+2014-09-30 16:02:02,409 - translator.views - INFO - Getting result for 542ab7d7f4c0791f4b452d16
+2014-09-30 16:02:02,415 - translator.views - DEBUG - Got response
+2014-09-30 16:05:44,063 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'0ab6d414-ccbc-47d3-a95a-27d538cd88a4.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 16:05:48,098 - translator.views - INFO - Async
+2014-09-30 16:05:55,624 - translator.views - INFO - Getting result for 542ab8bcf4c0791f4b452d1c
+2014-09-30 16:05:55,629 - translator.views - DEBUG - Got response
+2014-09-30 16:08:58,583 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'5161b9b0-a73d-4325-847f-ac5d378ac3e4.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 16:09:00,067 - translator.views - INFO - Async
+2014-09-30 16:09:10,601 - translator.views - INFO - Getting result for 542ab97cf4c0791f4b452d2c
+2014-09-30 16:09:10,606 - translator.views - DEBUG - Got response
+2014-09-30 16:09:24,250 - translator.factory - INFO - Creating app
+2014-09-30 16:09:24,252 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 16:09:24,307 - translator.factory - DEBUG - Creating celery app
+2014-09-30 16:09:24,308 - translator.factory - DEBUG - Using current flask app
+2014-09-30 16:19:38,324 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'0cb4cdc1-97d1-46e9-96dd-125610554615.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 16:19:39,685 - translator.views - INFO - Async
+2014-09-30 16:19:47,710 - translator.views - INFO - Getting result for 542abbfbf4c07963a53423c0
+2014-09-30 16:19:47,715 - translator.views - DEBUG - Got response
+2014-09-30 16:20:03,240 - translator.factory - INFO - Creating app
+2014-09-30 16:20:03,241 - translator.factory - DEBUG - Using config: /var/www/eurosentiment-translator/config.py
+2014-09-30 16:20:03,306 - translator.factory - DEBUG - Creating celery app
+2014-09-30 16:20:03,307 - translator.factory - DEBUG - Using current flask app
+2014-09-30 16:44:45,721 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'CarsHumanA0.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 16:44:51,474 - translator.views - INFO - Async
+2014-09-30 16:44:55,540 - translator.views - INFO - Getting result for 542ac1e3f4c07928673626b9
+2014-09-30 16:44:55,547 - translator.views - DEBUG - Got response
+2014-09-30 16:51:22,842 - translator.views - INFO - Processing: {'outformat': u'nt', 'template': u'ESMA2NTriples', 'baseuri': 'http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#', 'intype': u'file', 'informat': u'ES_MA', 'timeout': '0', 'input': <FileStorage: u'CarsHumanE48.xls' ('application/octet-stream')>, 'urischeme': 'RFC5147String'}
+2014-09-30 16:51:22,852 - translator.views - INFO - Async
+2014-09-30 16:51:23,360 - translator.views - INFO - Getting result for 542ac36af4c07928673626bd
+2014-09-30 16:51:23,365 - translator.views - DEBUG - Got response

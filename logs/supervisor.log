@@ -1,0 +1,246 @@
+2014-07-30 18:43:41,634 INFO daemonizing the supervisord process
+2014-07-30 18:43:41,635 INFO supervisord started with pid 13403
+2014-07-30 18:43:42,637 INFO spawnerr: can't find command 'venv/bin/gunicorn'
+2014-07-30 18:43:43,639 INFO spawnerr: can't find command 'venv/bin/gunicorn'
+2014-07-30 18:43:45,642 INFO spawnerr: can't find command 'venv/bin/gunicorn'
+2014-07-30 18:43:48,646 INFO spawnerr: can't find command 'venv/bin/gunicorn'
+2014-07-30 18:43:48,646 INFO gave up: eurosentiment-translator entered FATAL state, too many start retries too quickly
+2014-07-30 18:44:52,232 INFO daemonizing the supervisord process
+2014-07-30 18:44:52,232 INFO supervisord started with pid 13760
+2014-07-30 18:44:53,234 INFO spawnerr: can't find command 'venv/bin/gunicorn'
+2014-07-30 18:44:54,236 INFO spawnerr: can't find command 'venv/bin/gunicorn'
+2014-07-30 18:44:56,239 INFO spawnerr: can't find command 'venv/bin/gunicorn'
+2014-07-30 18:44:59,243 INFO spawnerr: can't find command 'venv/bin/gunicorn'
+2014-07-30 18:44:59,243 INFO gave up: eurosentiment-translator entered FATAL state, too many start retries too quickly
+2014-07-30 18:53:30,990 INFO daemonizing the supervisord process
+2014-07-30 18:53:30,991 INFO supervisord started with pid 15682
+2014-07-30 18:53:31,994 INFO spawned: 'eurosentiment-translator' with pid 15724
+2014-07-30 18:53:32,995 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-30 18:57:56,187 WARN received SIGTERM indicating exit request
+2014-07-30 18:57:56,192 INFO waiting for eurosentiment-translator to die
+2014-07-30 18:57:56,242 INFO stopped: eurosentiment-translator (exit status 0)
+2014-07-30 18:58:02,591 WARN received SIGTERM indicating exit request
+2014-07-30 18:58:13,762 WARN received SIGTERM indicating exit request
+2014-07-30 18:58:48,675 INFO daemonizing the supervisord process
+2014-07-30 18:58:48,677 INFO supervisord started with pid 17333
+2014-07-30 18:58:49,680 INFO spawned: 'eurosentiment-translator' with pid 17375
+2014-07-30 18:58:50,681 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-30 19:02:33,040 WARN received SIGTERM indicating exit request
+2014-07-30 19:02:33,064 INFO waiting for eurosentiment-translator to die
+2014-07-30 19:02:33,178 INFO stopped: eurosentiment-translator (exit status 0)
+2014-07-30 19:05:35,809 INFO RPC interface 'supervisor' initialized
+2014-07-30 19:05:35,810 WARN cElementTree not installed, using slower XML parser for XML-RPC
+2014-07-30 19:05:35,810 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2014-07-30 19:05:35,811 INFO daemonizing the supervisord process
+2014-07-30 19:05:35,813 INFO supervisord started with pid 19240
+2014-07-30 19:05:36,816 INFO spawned: 'eurosentiment-translator' with pid 19282
+2014-07-30 19:05:37,817 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-30 19:06:09,421 INFO stopped: eurosentiment-translator (exit status 0)
+2014-07-30 19:06:20,932 INFO spawned: 'eurosentiment-translator' with pid 19573
+2014-07-30 19:06:21,934 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-30 19:21:26,198 INFO stopped: eurosentiment-translator (exit status 0)
+2014-07-30 19:21:27,205 INFO spawned: 'eurosentiment-translator' with pid 23154
+2014-07-30 19:21:28,207 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-07-30 19:28:14,891 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-07 12:24:02,292 INFO RPC interface 'supervisor' initialized
+2014-08-07 12:24:02,463 WARN cElementTree not installed, using slower XML parser for XML-RPC
+2014-08-07 12:24:02,560 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2014-08-07 12:24:02,561 INFO daemonizing the supervisord process
+2014-08-07 12:24:02,562 CRIT could not write pidfile /var/www/eurosentiment-translator/supervisord.pid
+2014-08-07 12:24:03,612 INFO spawned: 'eurosentiment-translator' with pid 9924
+2014-08-07 12:24:04,614 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-07 12:41:30,622 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-07 12:41:30,626 INFO spawned: 'eurosentiment-translator' with pid 13762
+2014-08-07 12:41:31,627 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-07 12:43:07,788 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-07 12:43:08,796 INFO spawned: 'eurosentiment-translator' with pid 13908
+2014-08-07 12:43:09,798 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-07 12:52:50,746 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-07 12:52:51,753 INFO spawned: 'eurosentiment-translator' with pid 15608
+2014-08-07 12:52:52,755 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-07 13:04:21,824 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-12 11:03:51,874 INFO spawned: 'eurosentiment-translator' with pid 14329
+2014-08-12 11:03:52,876 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-12 11:09:06,378 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-12 11:09:06,383 INFO spawned: 'eurosentiment-translator' with pid 14993
+2014-08-12 11:09:07,385 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-12 11:10:10,429 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-12 11:10:11,436 INFO spawned: 'eurosentiment-translator' with pid 15619
+2014-08-12 11:10:12,437 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-12 16:33:57,623 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-12 16:33:57,627 INFO spawned: 'eurosentiment-translator' with pid 22815
+2014-08-12 16:33:58,629 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 18:57:36,637 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 18:57:36,657 INFO spawned: 'eurosentiment-translator' with pid 873
+2014-08-19 18:57:37,660 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 18:59:25,192 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 18:59:25,204 INFO spawned: 'eurosentiment-translator' with pid 1025
+2014-08-19 18:59:26,209 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 19:01:42,672 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 19:01:42,682 INFO spawned: 'eurosentiment-translator' with pid 1715
+2014-08-19 19:01:43,686 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 19:26:36,914 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 19:26:36,926 INFO spawned: 'eurosentiment-translator' with pid 6090
+2014-08-19 19:26:37,929 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 19:27:13,335 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 19:27:13,346 INFO spawned: 'eurosentiment-translator' with pid 6171
+2014-08-19 19:27:14,349 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 19:34:01,586 INFO waiting for eurosentiment-translator to die
+2014-08-19 19:34:01,750 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 19:34:01,760 INFO RPC interface 'supervisor' initialized
+2014-08-19 19:34:01,760 WARN cElementTree not installed, using slower XML parser for XML-RPC
+2014-08-19 19:34:01,760 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2014-08-19 19:34:01,761 CRIT could not write pidfile /var/www/eurosentiment-translator/supervisord.pid
+2014-08-19 19:34:02,768 INFO spawned: 'eurosentiment-translator' with pid 7622
+2014-08-19 19:34:03,771 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 19:39:02,669 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 19:39:02,685 INFO spawned: 'eurosentiment-translator' with pid 8813
+2014-08-19 19:39:04,649 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 20:57:11,746 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 20:57:11,757 INFO spawned: 'eurosentiment-translator' with pid 18642
+2014-08-19 20:57:12,775 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 21:00:09,447 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 21:00:09,458 INFO spawned: 'eurosentiment-translator' with pid 19685
+2014-08-19 21:00:11,401 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 21:06:07,090 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 21:06:07,102 INFO spawned: 'eurosentiment-translator' with pid 20401
+2014-08-19 21:06:09,057 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 21:11:39,569 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 21:11:39,583 INFO spawned: 'eurosentiment-translator' with pid 21114
+2014-08-19 21:11:41,544 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 21:12:24,930 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 21:12:24,946 INFO spawned: 'eurosentiment-translator' with pid 21280
+2014-08-19 21:12:26,789 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-19 21:12:45,909 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-19 21:12:45,925 INFO spawned: 'eurosentiment-translator' with pid 21401
+2014-08-19 21:12:47,049 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 17:29:53,670 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-20 17:29:53,682 INFO spawned: 'eurosentiment-translator' with pid 7899
+2014-08-20 17:29:54,583 INFO exited: eurosentiment-translator (exit status 3; not expected)
+2014-08-20 17:29:55,592 INFO spawned: 'eurosentiment-translator' with pid 7923
+2014-08-20 17:29:56,484 INFO exited: eurosentiment-translator (exit status 1; not expected)
+2014-08-20 17:29:58,496 INFO spawned: 'eurosentiment-translator' with pid 7988
+2014-08-20 17:29:59,334 INFO exited: eurosentiment-translator (exit status 1; not expected)
+2014-08-20 17:30:02,345 INFO spawned: 'eurosentiment-translator' with pid 8020
+2014-08-20 17:30:03,348 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 17:30:03,387 INFO exited: eurosentiment-translator (exit status 3; not expected)
+2014-08-20 17:30:04,402 INFO spawned: 'eurosentiment-translator' with pid 8151
+2014-08-20 17:30:05,404 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 17:30:05,494 INFO exited: eurosentiment-translator (exit status 1; not expected)
+2014-08-20 17:30:06,503 INFO spawned: 'eurosentiment-translator' with pid 8301
+2014-08-20 17:30:07,506 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 17:30:08,081 INFO exited: eurosentiment-translator (exit status 1; not expected)
+2014-08-20 17:30:09,090 INFO spawned: 'eurosentiment-translator' with pid 8623
+2014-08-20 17:30:09,915 INFO exited: eurosentiment-translator (exit status 1; not expected)
+2014-08-20 17:30:10,922 INFO spawned: 'eurosentiment-translator' with pid 8647
+2014-08-20 17:30:11,557 INFO exited: eurosentiment-translator (exit status 1; not expected)
+2014-08-20 17:30:13,566 INFO spawned: 'eurosentiment-translator' with pid 8671
+2014-08-20 17:30:14,390 INFO exited: eurosentiment-translator (exit status 1; not expected)
+2014-08-20 17:30:17,401 INFO spawned: 'eurosentiment-translator' with pid 8696
+2014-08-20 17:30:18,129 INFO exited: eurosentiment-translator (exit status 1; not expected)
+2014-08-20 17:30:19,131 INFO gave up: eurosentiment-translator entered FATAL state, too many start retries too quickly
+2014-08-20 17:30:26,732 INFO spawned: 'eurosentiment-translator' with pid 8767
+2014-08-20 17:30:27,737 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 17:31:44,846 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-20 17:31:44,858 INFO spawned: 'eurosentiment-translator' with pid 8857
+2014-08-20 17:31:45,874 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 18:36:26,464 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-20 18:36:26,480 INFO spawned: 'eurosentiment-translator' with pid 17280
+2014-08-20 18:36:27,517 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 18:48:14,237 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-20 18:48:14,249 INFO spawned: 'eurosentiment-translator' with pid 18601
+2014-08-20 18:48:15,277 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 18:49:45,538 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-20 18:49:45,554 INFO spawned: 'eurosentiment-translator' with pid 18699
+2014-08-20 18:49:46,551 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 18:50:36,778 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-20 18:50:36,792 INFO spawned: 'eurosentiment-translator' with pid 19321
+2014-08-20 18:50:38,743 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 18:53:22,126 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-20 18:53:22,140 INFO spawned: 'eurosentiment-translator' with pid 19615
+2014-08-20 18:53:23,227 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 18:56:02,641 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-20 18:56:02,652 INFO spawned: 'eurosentiment-translator' with pid 20639
+2014-08-20 18:56:04,620 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 19:41:48,813 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-20 19:41:48,829 INFO spawned: 'eurosentiment-translator' with pid 26348
+2014-08-20 19:41:49,900 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-20 20:45:23,515 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-20 20:45:23,531 INFO spawned: 'eurosentiment-translator' with pid 2424
+2014-08-20 20:45:24,523 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 10:53:56,389 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-21 10:53:56,401 INFO spawned: 'eurosentiment-translator' with pid 31821
+2014-08-21 10:53:58,372 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 10:55:46,846 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-21 10:55:46,860 INFO spawned: 'eurosentiment-translator' with pid 32525
+2014-08-21 10:55:48,744 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 11:14:39,480 INFO waiting for eurosentiment-translator to die
+2014-08-21 11:14:39,684 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-21 11:14:39,718 INFO RPC interface 'supervisor' initialized
+2014-08-21 11:14:39,718 WARN cElementTree not installed, using slower XML parser for XML-RPC
+2014-08-21 11:14:39,718 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2014-08-21 11:14:39,718 CRIT could not write pidfile /var/www/eurosentiment-translator/supervisord.pid
+2014-08-21 11:14:40,727 INFO spawned: 'eurosentiment-translator' with pid 2272
+2014-08-21 11:14:40,735 INFO spawned: 'eurosentiment-celery' with pid 2273
+2014-08-21 11:14:41,727 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 11:14:41,791 INFO success: eurosentiment-celery entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 11:14:48,509 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-21 11:14:51,195 INFO stopped: eurosentiment-celery (exit status 0)
+2014-08-21 11:14:51,207 INFO spawned: 'eurosentiment-translator' with pid 2329
+2014-08-21 11:14:51,224 INFO spawned: 'eurosentiment-celery' with pid 2330
+2014-08-21 11:14:52,227 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 11:14:52,227 INFO success: eurosentiment-celery entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 11:19:41,044 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-21 11:19:43,622 INFO stopped: eurosentiment-celery (exit status 0)
+2014-08-21 11:19:47,041 INFO spawned: 'eurosentiment-translator' with pid 3688
+2014-08-21 11:19:47,052 INFO spawned: 'eurosentiment-celery' with pid 3689
+2014-08-21 11:19:48,055 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 11:19:48,055 INFO success: eurosentiment-celery entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 13:39:20,772 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-21 13:39:23,275 INFO stopped: eurosentiment-celery (exit status 0)
+2014-08-21 13:39:23,286 INFO spawned: 'eurosentiment-translator' with pid 21007
+2014-08-21 13:39:23,305 INFO spawned: 'eurosentiment-celery' with pid 21008
+2014-08-21 13:39:24,308 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 13:39:24,308 INFO success: eurosentiment-celery entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 13:39:55,246 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-21 13:39:58,069 INFO stopped: eurosentiment-celery (exit status 0)
+2014-08-21 13:39:58,083 INFO spawned: 'eurosentiment-translator' with pid 21227
+2014-08-21 13:39:58,092 INFO spawned: 'eurosentiment-celery' with pid 21228
+2014-08-21 13:39:59,391 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 13:39:59,391 INFO success: eurosentiment-celery entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 13:40:13,969 INFO stopped: eurosentiment-translator (exit status 0)
+2014-08-21 13:40:16,687 INFO stopped: eurosentiment-celery (exit status 0)
+2014-08-21 13:40:16,699 INFO spawned: 'eurosentiment-translator' with pid 21834
+2014-08-21 13:40:16,720 INFO spawned: 'eurosentiment-celery' with pid 21835
+2014-08-21 13:40:17,723 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-08-21 13:40:17,723 INFO success: eurosentiment-celery entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-09-01 23:00:28,837 INFO exited: eurosentiment-translator (exit status 0; expected)
+2014-09-01 23:00:30,473 INFO exited: eurosentiment-celery (exit status 0; expected)
+2014-09-25 10:20:13,483 INFO RPC interface 'supervisor' initialized
+2014-09-25 10:20:13,513 WARN cElementTree not installed, using slower XML parser for XML-RPC
+2014-09-25 10:20:13,514 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2014-09-25 10:20:13,515 INFO daemonizing the supervisord process
+2014-09-25 10:20:13,520 CRIT could not write pidfile /var/www/eurosentiment-translator/supervisord.pid
+2014-09-25 10:20:14,536 INFO spawned: 'eurosentiment-translator' with pid 9422
+2014-09-25 10:20:14,588 INFO spawned: 'eurosentiment-celery' with pid 9423
+2014-09-25 10:20:15,590 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-09-25 10:20:15,590 INFO success: eurosentiment-celery entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-09-30 10:10:06,213 INFO stopped: eurosentiment-translator (exit status 0)
+2014-09-30 10:10:08,493 INFO stopped: eurosentiment-celery (exit status 0)
+2014-09-30 10:10:08,500 INFO spawned: 'eurosentiment-translator' with pid 31371
+2014-09-30 10:10:08,503 INFO spawned: 'eurosentiment-celery' with pid 31372
+2014-09-30 10:10:09,512 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-09-30 10:10:09,512 INFO success: eurosentiment-celery entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-09-30 12:44:01,939 INFO stopped: eurosentiment-translator (exit status 0)
+2014-09-30 12:44:04,341 INFO stopped: eurosentiment-celery (exit status 0)
+2014-09-30 12:44:04,349 INFO spawned: 'eurosentiment-translator' with pid 17279
+2014-09-30 12:44:04,351 INFO spawned: 'eurosentiment-celery' with pid 17280
+2014-09-30 12:44:05,544 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-09-30 12:44:05,544 INFO success: eurosentiment-celery entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-09-30 12:46:57,246 INFO stopped: eurosentiment-translator (exit status 0)
+2014-09-30 12:47:00,876 INFO stopped: eurosentiment-celery (exit status 0)
+2014-09-30 12:47:00,885 INFO spawned: 'eurosentiment-translator' with pid 18022
+2014-09-30 12:47:00,888 INFO spawned: 'eurosentiment-celery' with pid 18023
+2014-09-30 12:47:01,939 INFO success: eurosentiment-translator entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-09-30 12:47:02,005 INFO success: eurosentiment-celery entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2014-10-01 23:00:07,420 INFO exited: eurosentiment-translator (exit status 0; expected)

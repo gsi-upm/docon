@@ -5,7 +5,7 @@ import logging.config
 
 from flask.ext.script import Manager, Server
 from translator.factory import create_app
-from translator.models import User
+from translator.models import User, TranslationRequest
 
 if os.path.exists('logging.conf'):
     logging.config.fileConfig('logging.conf')
@@ -26,6 +26,16 @@ manager.add_command("runserver", Server(
 def init_users(admin,  email, password):
     admin = User(admin, email, True, password)
     admin.save()
+
+@manager.command
+def clean_files():
+    for tr in TranslationRequest.objects:
+        tr.clean_files()
+
+@manager.command
+def clean_requests():
+    for tr in TranslationRequest.objects:
+        tr.delete()
 
 if __name__ == "__main__":
     manager.run()

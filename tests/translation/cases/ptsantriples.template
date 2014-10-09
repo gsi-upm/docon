@@ -1,0 +1,68 @@
+{% set f = open_file(delimiter='\t') %}
+{% set prefixes = {
+    "a": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+    "marl": "http://www.gsi.dit.upm.es/ontologies/marl/ns#",
+    "prov": "http://www.w3.org/ns/prov#",
+    "onyx": "http://www.gsi.dit.upm.es/ontologies/onyx/ns#",
+    "pt": "http://eurosentiment.eu/ns#",
+    "nif": "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#",
+    "dc": "http://purl.org/dc/terms/"
+} 
+%}
+{% macro p(pref, value='') -%}
+<{{ prefixes[pref] }}{{ value }}>
+{%- endmacro %}
+{% set base = "test#" %}
+{% set analysis = "<%sMachineAnnotated>" % base %}
+{{ analysis }} {{ p("a") }} {{ p("marl", "SentimentAnalysis") }} .
+{{ analysis }} {{ p("dc", "language") }} {{ p("marl", "SentimentAnalysis") }} .
+{{ analysis }} {{ p("marl", "maxPolarityValue") }} "10.0" .
+{{ analysis }} {{ p("marl", "minPolarityValue") }} "0.0" .
+{{ analysis }} {{ p("prov", "wasAssociatedWith") }} {{ p("pt", "agent") }} .
+{% if language %}
+{{ analysis }} {{ p("dc", "language") }} "{{ language }}" .
+{% endif %}
+
+{% for i in f %}
+
+{% set text = i[0] %}
+{% set syntax=linesplit(i[1][1:-1], ",") %}
+{% set pol= i[2] | float %}
+{% set entry = "<%sContext%s>" % (base, loop.index) %}
+{% set opinion = "<%sOpinion%s>" % (base, loop.index) %}
+
+{{ entry }} {{ p("a") }} {{ p("nif", "Context") }} .
+{{ entry }} {{ p("a") }} {{ p("nif", "RFC5147String") }} .
+{{ entry }} {{ p("marl", "hasOpinion") }} {{ opinion }} .
+{{ entry }} {{ p("nif", "isString") }} {{ text | escapejs }} .
+ 
+{{ opinion }} {{ p("a") }} {{ p("marl", "Opinion") }} .
+{{ opinion }} {{ p("prov", "wasGeneratedBy") }} {{ analysis }} .
+{% if pol%}
+{{ opinion }} {{ p("marl", "polarityValue") }} "{{ pol/10.0 }}" .
+
+{% if pol > 5 %}
+{{ opinion }} {{ p("marl", "hasPolarity") }} {{ p("marl", "Positive") }} .
+{% elif pol < 5 %}
+{{ opinion }} {{ p("marl", "hasPolarity") }} {{ p("marl", "Negative") }} .
+{% else %} 
+{{ opinion }} {{ p("marl", "hasPolarity") }} {{ p("marl", "Neutral") }} .
+{% endif %}
+{% endif %}
+
+{% set outer = loop %}
+{% for s in syntax %}
+{% set parts = linesplit(s, ";;") %}
+{% set synsets = linesplit(parts[3][1:-1], ",") %}
+{% set string = "<%sString%s_%s>" % (base, outer.index, loop.index) %}
+
+{{ string }} {{ p("a") }} {{ p("nif", "RFC5147String") }} .
+{{ string }} {{ p("nif", "hasContext") }} {{ entry }} .
+{{ string }} {{ p("nif", "anchorOf") }} {{ parts[0] | escapejs }} .
+{{ string }} {{ p("nif", "posTag") }} {{ parts[1] | escapejs }} .
+{{ string }} {{ p("nif", "lemma") }} {{ parts[2] | escapejs }} .
+{% for synset in synsets if synset %}
+{{ string }} {{ p("pt", "synset") }} {{ synset | escapejs }}
+{% endfor %}
+{% endfor %}
+{% endfor%}

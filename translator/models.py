@@ -37,7 +37,7 @@ class EuFormat(db.Document):
                                choices=fileformats,
                                default=CSV)
     description = db.StringField(verbose_name='Description of the format',
-                                 max_length=200)
+                                 max_length=1500)
     example = db.FileField(verbose_name='Example of the format',
                            collection_name='example')
 
@@ -71,6 +71,9 @@ class EuTemplate(db.Document):
 
 
 class TranslationRequest(db.Document):
+    ERROR = "error"
+    PENDING = "pending"
+    SUCCESS = "success"
     INTYPES = (
         ('file', 'File'),
         ('url', 'Specify the file URL'),
@@ -100,8 +103,11 @@ class TranslationRequest(db.Document):
                              required=False)
     prefix = db.StringField(verbose_name='Prefix', max_length=20)
     language = db.StringField(verbose_name='Language of the corpus',
-                              choices=LANGUAGES)
+                              choices=LANGUAGES,
+                              required=False)
     ip = db.StringField(verbose_name='Request IP')
+    status = db.StringField(verbose_name='Status of the request')
+    message = db.StringField(verbose_name='Return message')
     requested = db.DateTimeField(default=datetime.datetime.now)
     started = db.DateTimeField()
     finished = db.DateTimeField()
@@ -117,8 +123,13 @@ class TranslationRequest(db.Document):
         self.infile = self.outfile = None
         self.save()
 
+    def delete(self, *args, **kwargs):
+        self.clean_files()
+        super(TranslationRequest, self).delete(*args, **kwargs)
+
     def start(self):
         self.started = datetime.datetime.now()
+        self.status = self.PENDING
         self.save()
 
     def finish(self):
@@ -146,7 +157,9 @@ class TranslationRequest(db.Document):
                 "finished": self.finished,
                 "informat": self.informat.name,
                 "outformat": self.outformat,
-                "template": self.template.name }
+                "template": self.template.name,
+                "status": self.status,
+                "message": self.message}
 
 
 class User(db.Document):

@@ -1,0 +1,22 @@
+CELERY_BROKER_URL = ''
+CELERY_RESULT_BACKEND = ''
+CELERY_MONGODB_BACKEND_SETTINGS = {
+    'user': '',
+    'password': '',
+    'database': '',
+    'taskmeta_collection': '',
+}
+MONGODB_SETTINGS = {
+    'DB': "",
+    'USERNAME': '',
+    'PASSWORD': '',
+}
+SECRET_KEY = ""
+from celery.schedules import crontab
+CELERYBEAT_SCHEDULE = {
+    'every-minute': {
+        'task': 'translator.tasks.clean_files',
+        'schedule': crontab(minute='*/1'),
+        'args': (),
+    },
+}
