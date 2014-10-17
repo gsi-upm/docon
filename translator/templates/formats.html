@@ -6,7 +6,7 @@
 {% for format in formats %}
 <li> {{ format.name }}
 <ul>
-    <li> <pre>{{ format.description }}</pre></li>
+    <li>{{ format.description | safe}}</li>
     {% if format.example %}
     <li> <a href="{{ url_for("frontend.serve_example", fmt=format.name) }}" >Example file</a> </li> 
     {% endif %}

@@ -83,7 +83,7 @@ def process():
               "language": {"aliases": ("language", "l"),
                            "required": False,
                            },
-              "baseuri": {"aliases": ("base", "b"),
+              "baseuri": {"aliases": ("base", "b", "baseuri"),
                            "required": False,
                            "default": "http://demos.gsi.dit.upm.es/eurosentiment/generator/process/default#",
                             },
