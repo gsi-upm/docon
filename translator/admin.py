@@ -60,6 +60,7 @@ class EuFormatView(PrivateModelView):
 
 
 class TranslationRequestView(AdminModelView):
+    column_default_sort = ('requested', True)
     @action('clean_files', 'Clean files',
             'Are you sure you want to delete the associated files?')
     def action_clean_files(self, ids):

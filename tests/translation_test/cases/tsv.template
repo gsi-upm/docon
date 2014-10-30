@@ -1,4 +1,4 @@
-{% set file = open_file(delimiter='\t') %}
+{% set file = open_file(informat="csv", delimiter='\t') %}
 {% for row in file %}
 {% for item in row %}
 {{ item.strip() }}

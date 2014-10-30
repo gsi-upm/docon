@@ -17,6 +17,7 @@ logger = logging.getLogger(__name__)
 
 frontend = Blueprint('frontend', __name__, url_prefix='')
 import tasks
+import models
 
 @frontend.route("/login", methods=["GET", "POST"])
 def login():
@@ -130,6 +131,7 @@ def process():
 def get_result(translation_id):
     logger.info("Getting result for {}".format(translation_id))
     headers = {}
+    mimetype = "text/html"
     try:
         tr = TranslationRequest.objects.get(id=translation_id)
         headers["Location"] = url_for("frontend.get_result",
@@ -138,6 +140,7 @@ def get_result(translation_id):
         status = tr.status
         if status == tr.SUCCESS:
             outfile = tr.outfile
+            mimetype = models.MIMES.get(tr.outformat, models.MIMES["default"])
             status = 200
             result = outfile.get()
             logger.debug("Got response")
@@ -151,7 +154,7 @@ def get_result(translation_id):
     except Exception as ex:
         status = 404
         result = "Translation ID not found: {}".format(ex)
-    return Response(result, status=status, headers=headers)
+    return Response(result, status=status, headers=headers, mimetype=mimetype)
 
 @frontend.route('/my_requests')
 def my_requests():

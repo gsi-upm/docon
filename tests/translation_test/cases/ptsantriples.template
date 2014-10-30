@@ -1,4 +1,4 @@
-{% set f = open_file(delimiter='\t') %}
+{% set f = open_file(informat="csv", delimiter='\t') %}
 {% set prefixes = {
     "a": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
     "marl": "http://www.gsi.dit.upm.es/ontologies/marl/ns#",

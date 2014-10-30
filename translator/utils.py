@@ -23,6 +23,7 @@ import os
 import csv
 import codecs
 from datetime import datetime
+from itertools import islice
 from functools import partial
 
 # import the logging library
@@ -96,7 +97,7 @@ def open_file(infile, informat='raw', **kwargs):
         elif informat == "csv":
             f = csv.reader(infile, **kwargs)
         else:
-            f = iter(infile.readline, "")
+            f = codecs.iterdecode(iter(infile.readline, ""), 'utf-8')
     return f
 
 
@@ -107,6 +108,7 @@ def get_template(template, infile):
     env.globals['linesplit'] = linesplit
     env.globals['convert_date'] = convert_date
     env.globals['len'] = len
+    env.globals['islice'] = islice
     env.filters['escapejs'] = escapejs
     env.globals['open_file'] = partial(open_file, infile)
     return env.from_string(template)

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import time
+import traceback
 from factory import create_celery_app
 from .models import *
 from .utils import translate_document
@@ -35,8 +36,9 @@ def process_request(tid):
         logger.warning("Processed")
         return tr
     except Exception as ex:
+        raise
         tr.status = TranslationRequest.ERROR
-        tr.message = str(ex)
+        tr.message = str("{} -- {}".format(ex, traceback.format_exc()))
         tr.finish()
 
 

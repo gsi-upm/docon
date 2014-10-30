@@ -13,6 +13,12 @@ OUTFORMATS = (
     ('trix', 'TRIX'),
 )
 
+MIMES = {
+    "json-ld": "application/json",
+    "rdf": "application/rdf+xml",
+    "default": "text/plain"
+}
+
 class EuFormat(db.Document):
     TXT = 'txt'
     CSV = 'csv'
@@ -156,6 +162,7 @@ class TranslationRequest(db.Document):
                 "requested": self.requested,
                 "finished": self.finished,
                 "informat": self.informat.name,
+                #"infile": self.infile,
                 "outformat": self.outformat,
                 "template": self.template.name,
                 "status": self.status,
