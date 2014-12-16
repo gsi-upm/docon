@@ -1,17 +1,17 @@
-CELERY_BROKER_URL = ''
-CELERY_RESULT_BACKEND = ''
+CELERY_BROKER_URL = 'mongodb://<user>:<password>@localhost:27017/eurosentiment_celery_broker'
+CELERY_RESULT_BACKEND = 'mongodb://localhost:27017/'
 CELERY_MONGODB_BACKEND_SETTINGS = {
-    'user': '',
-    'password': '',
-    'database': '',
-    'taskmeta_collection': '',
+    'user': '<user>',
+    'password': '<password>',
+    'database': 'eurosentiment_celery_backend',
+    'taskmeta_collection': 'eurosentiment_taskmetadata',
 }
 MONGODB_SETTINGS = {
-    'DB': "",
-    'USERNAME': '',
-    'PASSWORD': '',
+    'DB': "eurosentiment_translator",
+    'USERNAME': '<user>',
+    'PASSWORD': '<password>',
 }
-SECRET_KEY = ""
+SECRET_KEY = "KeepThisS3cr3t"
 from celery.schedules import crontab
 CELERYBEAT_SCHEDULE = {
     'every-minute': {

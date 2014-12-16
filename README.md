@@ -1,5 +1,5 @@
 ![GSI Logo](http://gsi.dit.upm.es/templates/jgsi/images/logo.png)
-[Eurosentiment Generator](http://demos.gsi.dit.upm.es/eurosentiment/generator) 
+[Eurosentiment Translator](http://demos.gsi.dit.upm.es/eurosentiment-translator) 
 ==================================
 
 Introduction
@@ -14,11 +14,11 @@ Eurosentiment Generator is under heavy development. As of this writing, it suppo
 * Saving or outputting the result
 * HTTP API
 * Logging translation requests
+* Auto selection of the best template based on the input format
 
 In the future, we might include the following features:
 * Conversion of semantic formats
 * Automatic translation between semantic formats (e.g. [RDF](http://www.w3.org/RDF/) to [JSON-LD](http://json-ld.org/))
-* Auto selection of the best template based on the input format
 
 Translating a document
 ----------------------

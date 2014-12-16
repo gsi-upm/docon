@@ -22,6 +22,7 @@ import sys
 import os
 import csv
 import codecs
+import re
 from datetime import datetime
 from itertools import islice
 from functools import partial
@@ -71,7 +72,7 @@ def download_file(url):
     return local_filename
 
 
-def open_file(infile, informat='raw', **kwargs):
+def open_file(infile, informat='raw', encoding="utf-8", **kwargs):
     logger.debug('Opening file: {}'.format(infile))
     if isinstance(infile, basestring):
         if informat == "vnd.ms-excel" or informat == 'xls':
@@ -83,9 +84,9 @@ def open_file(infile, informat='raw', **kwargs):
             f = etree.parse(infile)
         elif informat == "csv":
             logger.debug('Opening as csv')
-            f = csv.reader(open(infile, 'r'), **kwargs)
+            f = csv.reader(codecs.open(infile, 'r', encoding), **kwargs)
         else:
-            f = codecs.open(infile, 'r', "utf-8")
+            f = codecs.open(infile, 'r', encoding)
     else:
         if informat == "vnd.ms-excel" or informat == 'xls':
             import xlrd
@@ -97,7 +98,7 @@ def open_file(infile, informat='raw', **kwargs):
         elif informat == "csv":
             f = csv.reader(infile, **kwargs)
         else:
-            f = codecs.iterdecode(iter(infile.readline, ""), 'utf-8')
+            f = codecs.iterdecode(iter(infile.readline, ""), encoding)
     return f
 
 
@@ -108,6 +109,7 @@ def get_template(template, infile):
     env.globals['linesplit'] = linesplit
     env.globals['convert_date'] = convert_date
     env.globals['len'] = len
+    env.globals['re'] = re
     env.globals['islice'] = islice
     env.filters['escapejs'] = escapejs
     env.globals['open_file'] = partial(open_file, infile)
