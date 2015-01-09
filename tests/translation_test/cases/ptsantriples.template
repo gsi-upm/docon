@@ -34,7 +34,7 @@
 {{ entry }} {{ p("a") }} {{ p("nif", "Context") }} .
 {{ entry }} {{ p("a") }} {{ p("nif", "RFC5147String") }} .
 {{ entry }} {{ p("marl", "hasOpinion") }} {{ opinion }} .
-{{ entry }} {{ p("nif", "isString") }} {{ text | escapejs }} .
+{{ entry }} {{ p("nif", "isString") }} "{{ text }}" .
  
 {{ opinion }} {{ p("a") }} {{ p("marl", "Opinion") }} .
 {{ opinion }} {{ p("prov", "wasGeneratedBy") }} {{ analysis }} .
@@ -58,11 +58,11 @@
 
 {{ string }} {{ p("a") }} {{ p("nif", "RFC5147String") }} .
 {{ string }} {{ p("nif", "hasContext") }} {{ entry }} .
-{{ string }} {{ p("nif", "anchorOf") }} {{ parts[0] | escapejs }} .
+{{ string }} {{ p("nif", "anchorOf") }} "{{ parts[0] }}" .
 {{ string }} {{ p("nif", "posTag") }} {{ parts[1] | escapejs }} .
 {{ string }} {{ p("nif", "lemma") }} {{ parts[2] | escapejs }} .
 {% for synset in synsets if synset %}
-{{ string }} {{ p("pt", "synset") }} {{ synset | escapejs }}
+{{ string }} {{ p("pt", "synset") }} "{{ synset }}"
 {% endfor %}
 {% endfor %}
 {% endfor%}

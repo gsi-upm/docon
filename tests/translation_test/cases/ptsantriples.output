@@ -10,7 +10,7 @@
 <test#Context1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> .
 <test#Context1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
 <test#Context1> <http://www.gsi.dit.upm.es/ontologies/marl/ns#hasOpinion> <test#Opinion1> .
-<test#Context1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> "This is a test" .
+<test#Context1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> "Thís is a test" .
  
 <test#Opinion1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.gsi.dit.upm.es/ontologies/marl/ns#Opinion> .
 <test#Opinion1> <http://www.w3.org/ns/prov#wasGeneratedBy> <test#MachineAnnotated> .
@@ -21,7 +21,7 @@
 
 <test#String1_1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> .
 <test#String1_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <test#Context1> .
-<test#String1_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> "This" .
+<test#String1_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> "Thís" .
 <test#String1_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#posTag> "PR" .
 <test#String1_1> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lemma> "this" .
 

@@ -20,7 +20,7 @@ from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 import json
 import sys
 import os
-import csv
+import unicodecsv as csv
 import codecs
 import re
 from datetime import datetime
@@ -44,11 +44,15 @@ def convert_date(value, informat="%d-%B-%Y", outformat="%Y-%m-%d-"):
 
 
 def escapejs(val):
-        try:
-            return json.dumps(val)
-        except Exception as ex:
-            logger.error(ex)
-            return "\"\""
+    try:
+        return json.dumps(val)
+    except Exception as ex:
+        logger.error(ex)
+        return "\"\""
+
+def escapepy(val):
+    return json.dumps(val, ensure_ascii=False)
+    #return repr(val)[2:-1]
 
 
 def get_client_ip(request):
@@ -84,7 +88,9 @@ def open_file(infile, informat='raw', encoding="utf-8", **kwargs):
             f = etree.parse(infile)
         elif informat == "csv":
             logger.debug('Opening as csv')
-            f = csv.reader(codecs.open(infile, 'r', encoding), **kwargs)
+            f = csv.reader(open(infile, 'r'),
+                           encoding=encoding,
+                           **kwargs)
         else:
             f = codecs.open(infile, 'r', encoding)
     else:
@@ -96,7 +102,8 @@ def open_file(infile, informat='raw', encoding="utf-8", **kwargs):
             logger.debug('An XML file!')
             f = etree.fromstring(infile)
         elif informat == "csv":
-            f = csv.reader(infile, **kwargs)
+            logger.debug("CSV file")
+            f = csv.reader(infile, encoding=encoding, **kwargs)
         else:
             f = codecs.iterdecode(iter(infile.readline, ""), encoding)
     return f
@@ -112,6 +119,7 @@ def get_template(template, infile):
     env.globals['re'] = re
     env.globals['islice'] = islice
     env.filters['escapejs'] = escapejs
+    env.filters['escapepy'] = escapepy
     env.globals['open_file'] = partial(open_file, infile)
     return env.from_string(template)
 

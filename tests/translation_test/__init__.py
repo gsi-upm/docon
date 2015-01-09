@@ -34,7 +34,7 @@ def check_case(case):
     input_file = "{}.input".format(case)
     output_file = "{}.output".format(case)
     data_file = "{}.data".format(case)
-    with codecs.open(template_file, 'r') as f:
+    with codecs.open(template_file, 'r', encoding="utf-8") as f:
         template = f.read()
     template_data = {}
     if isfile(data_file):
@@ -42,14 +42,14 @@ def check_case(case):
             template_data = json.load(f)
     stream = translate_document(input_file, template, template_data)
     real_output = u"".join(item for item in stream)
-    print "Real: '{}'".format(real_output.encode("utf-8", errors="ignore"))
+    print u"Real: '{}'".format(real_output)
     with codecs.open(output_file, 'r', 'utf-8') as f:
         expected_output = f.read()
-    print "Expected: '{}'".format(expected_output.encode("utf-8", errors="ignore"))
+    print u"Expected: '{}'".format(expected_output)
 
     diff = difflib.unified_diff(real_output, expected_output)
     thediff = "".join(line for line in diff)
-    print("Difference:\n{}".format(thediff.encode("utf-8", errors="ignore")))
+    print(u"Difference:\n{}".format(thediff))
     assert real_output.strip() == expected_output.strip()
 
 if __name__ == '__main__':

@@ -109,7 +109,10 @@ def process():
     except ValueError as ex:
         return ex.message
     logger.info("Processing: {}".format(params))
-    tr = TranslationRequest.from_params(params)
+    try:
+        tr = TranslationRequest.from_params(params)
+    except EuTemplate.DoesNotExist as ex:
+        return ex.message, 404
     tr.ip = get_client_ip(request)
     tr.save()
     trid = tr.id

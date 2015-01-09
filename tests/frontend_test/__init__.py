@@ -24,10 +24,10 @@ class TranslatorTest(unittest.TestCase):
         pass
 
     def testSimple(self):
-        resp = self.client.get("/process?input=4")
-        assert 5 == int(resp.data)
-        print resp.status
-        assert 200 == resp.status_code
+        resp = self.client.get("/process?input=4&template=raw")
+        print resp.data
+        print resp.status_code
+        assert 404 == resp.status_code
 
 if __name__ == '__main__':
     unittest.main()
