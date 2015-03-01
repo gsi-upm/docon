@@ -4,12 +4,12 @@ import logging
 import logging.config
 
 from flask.ext.script import Manager, Server
-from translator.factory import create_app
-from translator.models import User, TranslationRequest
+from docon.factory import create_app
+from docon.models import User, TranslationRequest
 
 if os.path.exists('logging.conf'):
     logging.config.fileConfig('logging.conf')
-logging.getLogger("translator").addHandler(logging.NullHandler())
+logging.getLogger("docon").addHandler(logging.NullHandler())
 app = create_app()
 manager = Manager(app)
 

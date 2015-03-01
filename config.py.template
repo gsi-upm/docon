@@ -7,7 +7,7 @@ CELERY_MONGODB_BACKEND_SETTINGS = {
     'taskmeta_collection': 'eurosentiment_taskmetadata',
 }
 MONGODB_SETTINGS = {
-    'DB': "eurosentiment_translator",
+    'DB': "conpy",
     'USERNAME': '<user>',
     'PASSWORD': '<password>',
 }
@@ -15,7 +15,7 @@ SECRET_KEY = "KeepThisS3cr3t"
 from celery.schedules import crontab
 CELERYBEAT_SCHEDULE = {
     'every-minute': {
-        'task': 'translator.tasks.clean_files',
+        'task': 'conpy.tasks.clean_files',
         'schedule': crontab(minute='*/1'),
         'args': (),
     },

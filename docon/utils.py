@@ -31,7 +31,7 @@ from functools import partial
 import logging
 # Get an instance of a logger
 logging.basicConfig()
-logger = logging.getLogger("translator")
+logger = logging.getLogger("docon")
 logger.setLevel(logging.DEBUG)
 
 
@@ -146,20 +146,19 @@ def get_client_ip(request):
     return ip
 
 def get_params(req, params):
-    indict = None
+    outdict = None
     if req.method == 'POST':
-        indict = req.form.copy()
+        outdict = req.form.copy()
     elif req.method == 'GET':
-        indict = req.args.copy()
+        outdict = req.args.copy()
     else:
         raise ValueError("Invalid data")
-    indict.update(req.files)
-    outdict = {}
+    outdict.update(req.files)
     wrongParams = {}
     for param, options in params.iteritems():
         for alias in options["aliases"]:
-            if alias in indict:
-                outdict[param] = indict[alias]
+            if alias in outdict:
+                outdict[param] = outdict[alias]
         if param not in outdict:
             if options.get("required", False):
                 wrongParams[param] = params[param]

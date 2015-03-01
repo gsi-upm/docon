@@ -1,18 +1,19 @@
 import os
 import time
-import translator
-import translator.factory
-from translator.utils import translate_document
+import docon
+import docon.factory
 import unittest
 import tempfile
 import StringIO
+from docon.utils import translate_document
+from docon.factory import create_app
 from mongoengine.connection import get_connection, disconnect
 
 
-class TranslatorTest(unittest.TestCase):
+class FrontendTest(unittest.TestCase):
 
     def setUp(self):
-        self.app = translator.factory.create_app('config_test.py')
+        self.app = create_app('config_test.py')
         self.app.debug = True
         self.client = self.app.test_client()
 

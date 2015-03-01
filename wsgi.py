@@ -9,13 +9,13 @@
 from werkzeug.serving import run_simple
 from werkzeug.wsgi import DispatcherMiddleware
 
-from translator import factory
+from docon import factory
 import os.path
 import logging.config
 
 if os.path.exists('logging.conf'):
     logging.config.fileConfig('logging.conf')
-logging.getLogger("translator").addHandler(logging.NullHandler())
+logging.getLogger("docon").addHandler(logging.NullHandler())
 
 application = factory.create_app()
 

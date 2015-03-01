@@ -1,6 +1,6 @@
 from utils import *
 
-if __name__ == "__main__":
+def run_cli():
     import argparse
     logging.basicConfig()
     parser = argparse.ArgumentParser()
@@ -33,3 +33,6 @@ if __name__ == "__main__":
         logger.debug("Template is {}".format(args.template))
         stream = translate_document(infile, template.read(), {"baseuri": args.baseuri})
         stream.dump(outfile, encoding="utf-8")
+
+if __name__ == "__main__":
+    run_cli()

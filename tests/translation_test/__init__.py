@@ -6,7 +6,7 @@ import StringIO
 import difflib
 import codecs
 import json
-from translator.utils import translate_document
+from docon.utils import translate_document
 from functools import partial
 from os import listdir
 from os.path import isfile, join, abspath, dirname

@@ -1,12 +1,12 @@
 ![GSI Logo](http://gsi.dit.upm.es/templates/jgsi/images/logo.png)
-[Eurosentiment Translator](http://demos.gsi.dit.upm.es/eurosentiment-translator) 
+[DoCon](http://demos.gsi.dit.upm.es/docon) 
 ==================================
 
 Introduction
 ---------------------
-This tool will take several input formats and translates them to semantic formats. It focuses on translating corpora to the NIF+[Marl](http://gsi.dit.upm.es/ontologies/marl) format, usin json-ld.
+This tool will take several input formats and translates them to semantic formats. It focuses on translating corpora to the NIF+[Marl](http://gsi.dit.upm.es/ontologies/marl) format, using json-ld.
 
-Eurosentiment Generator is under heavy development. As of this writing, it supports:
+DoCon is under heavy development. As of this writing, it supports:
 
 * Creating and administrating translation templates (admin level)
 * Editing templates to convert traditional formats (csv, tsv, xls, xml) formats to NIF+Marl+Onyx.
@@ -22,10 +22,9 @@ In the future, we might include the following features:
 
 Translating a document
 ----------------------
-Documents can be translated via the Web Interface or using the REST interface.
-Actually, the form in the Web is simply a convenient way of accessing the REST interface which shows all the available templates and a field to upload the desired file.
+Documents can be translated via the Web Interface, through the REST interface, or via Command-Line.
 
-The Generator endpoint takes the following parameters:
+The Generator endpoint takes these parameters:
 
  * input (i): The original file to be translated
  * informat (f): The format of the original file
@@ -42,30 +41,51 @@ The Generator endpoint takes the following parameters:
  * base URI (u) [Optional]: base URI to use for the corpus
  * prefix (p) [Optional]: prefix to replace the base URI
  * language (l) [Optional]: language code (see dc:terms and [ISO 639](http://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) )
- * template (t) [Optional]: ID of the template to use. If it is omitted, a template to convert from informat to outformat will be used, or a template from informat to another format (e.g. json-ld), with automatic conversion.
+ * template (t) [Optional]: ID of the template to use. If it is omitted, a template to convert from informat to outformat will be used, or a template from informat to another format (e.g. json-ld), with automatic conversion (*to be done*).
  * toFile [Optional]: Whether the result should be sent in the response (default) or written to a file. For convenience, this value defaults to False when using the Web Form.
 
 Using the command line tool *curl*, a request can be made like this:
 
     curl -F"template=Example_to_Marl" -F"input=@input-file.csv" -F"intype=FILE"
-        http://demos.gsi.dit.upm.es/eurosentiment/marlgenerator/process
+        http://demos.gsi.dit.upm.es/docon/process
         > result.jsonld
+
+Command-line tool
+-----------------
+In addition to the methods above, this tool can be used directly in the command line.
+Just install the package and run:
+
+    docon -i <file to be converted> --template <conversion template> -o <output>
+
+If you don't want to install the package, or prefer to run it as a module, you can also run it like so:
+
+    python -m docon.cli -i <file to be converted> --template <conversion template> -o <output>
+
+Or use the associated script:
+
 
 Installation instructions
 ------------------------------
-This repository contains all the code necessary to run an eurosentiment-generator. To install it, follow the following steps:
+The easy way:
 
-* Copy the eurosentiment/settings-private.py.template to eurosentiment/settings-private.py
+    pip install docon
+
+That will allow you to use the CLI tool right away.
+So far, if you want to run the server, you will need to run your own wsgi script or copy wsgi.py from this repository.
+
+To install it from source, follow these steps:
+
+* Copy the docon/settings-private.py.template to docon/settings-private.py
 * Add your database information to settings.py
 * Create a virtualenv (preferably, in the project root)
 * Install the required packages:
-
+```
     pip install -r requirements.txt
-
+```
 * Test the environment with:
-
+```
     python manage.py runserver localhost:<PORT>
-
+```
 
 If the standalone server works, you can try serving the portal via apache/nginx and WSGI. It has been tested with apache2 and uwsgi. In that case you will also need to serve the static files from your web server. An example configuration for Apache2 would be:
 
@@ -74,29 +94,29 @@ If the standalone server works, you can try serving the portal via apache/nginx 
 
     [ ... ]
 
-    WSGIScriptAlias /eurosentiment /path_to_eurosentiment/eurosentiment/wsgi.py
-    WSGIDaemonProcess eurosentiment user=www-data group=www-data processes=nprocesses threads=nthreads python-path=/path_to_eurosentiment:/path_to_eurosentiment/venv/lib/python2.7/site-packages
-    WSGIProcessGroup eurosentiment
-    <Directory /path_to_eurosentiment>
+    WSGIScriptAlias /docon /path_to_docon/wsgi.py
+    WSGIDaemonProcess docon user=www-data group=www-data processes=nprocesses threads=nthreads python-path=/path_to_docon:/path_to_docon/venv/lib/python2.7/site-packages
+    WSGIProcessGroup docon
+    <Directory /path_to_docon>
     Order allow,deny
     Allow from all
     </Directory>
 
-    Alias /eurosentiment/robots.txt /path_to_eurosentiment/static/robots.txt
-    Alias /eurosentiment/favicon.ico /path_to_eurosentiment/static/favicon.ico
+    Alias /docon/robots.txt /path_to_docon/static/robots.txt
+    Alias /docon/favicon.ico /path_to_docon/static/favicon.ico
 
-    AliasMatch ^eurosentiment/([^/]*\.css) /path_to_eurosentiment/static/styles/$1
+    AliasMatch ^docon/([^/]*\.css) /path_to_docon/static/styles/$1
 
-    Alias /eurosentiment/media/ /path_to_eurosentiment/media/
-    Alias /eurosentiment/static/ /path_to_eurosentiment/static/
+    Alias /docon/media/ /path_to_docon/media/
+    Alias /docon/static/ /path_to_docon/static/
 
-    <Directory /path_to_eurosentiment/static>
+    <Directory /path_to_docon/static>
     Order deny,allow
     Allow from all
     Options -Indexes
     </Directory>
 
-    <Directory /path_to_eurosentiment/media>
+    <Directory /path_to_docon/media>
     Order deny,allow
     Allow from all
     Options -Indexes
