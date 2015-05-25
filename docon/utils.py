@@ -112,6 +112,8 @@ def open_file(infile, informat='raw', encoding="utf-8", **kwargs):
 def get_template(template, infile):
     env = Environment(trim_blocks=True,
                       lstrip_blocks=True,
+                      line_statement_prefix='%',
+                      line_comment_prefix='#',
                       extensions=['jinja2.ext.do', ])
     env.globals['linesplit'] = linesplit
     env.globals['convert_date'] = convert_date

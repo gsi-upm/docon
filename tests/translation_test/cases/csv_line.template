@@ -1,0 +1,7 @@
+% set file = open_file(informat="csv", delimiter=',') 
+% for row in file 
+% for item in row 
+{{ item.strip() }}
+% endfor 
+{{ "------" if not loop.last }} # Dash after each row
+% endfor 

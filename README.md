@@ -24,7 +24,7 @@ Translating a document
 ----------------------
 Documents can be translated via the Web Interface, through the REST interface, or via Command-Line.
 
-The Generator endpoint takes these parameters:
+DoCon's endpoint takes these parameters:
 
  * input (i): The original file to be translated
  * informat (f): The format of the original file
@@ -50,19 +50,40 @@ Using the command line tool *curl*, a request can be made like this:
         http://demos.gsi.dit.upm.es/docon/process
         > result.jsonld
 
+Templates
+---------
+DoCon templates are custom jinja2 templates with syntactic sugar, custom preferences and functions to deal with different document types.
+
+For instance, this is a template that prints each cell in a csv file in a separate line, adding a dashed line between rows:
+
+    {% set file = open_file(informat="csv", delimiter=',') %}
+    {% for row in file %}
+    {% for item in row %}
+    {{ item.strip() }}
+    {% endfor %}
+    {{ "------" if not loop.last }}
+    {% endfor %}
+
+This is the alternative and cleaner form of the same template using jinja's line expressions:
+
+    % set file = open_file(informat="csv", delimiter=',') 
+    % for row in file 
+    % for item in row 
+    {{ item.strip() }}
+    % endfor 
+    {{ "------" if not loop.last }}
+    % endfor 
+
 Command-line tool
 -----------------
-In addition to the methods above, this tool can be used directly in the command line.
+In addition to providing an endpoint, this tool can be used directly in the command line.
 Just install the package and run:
 
     docon -i <file to be converted> --template <conversion template> -o <output>
 
-If you don't want to install the package, or prefer to run it as a module, you can also run it like so:
+If you don't want to install the package, you can also run it like a normal python module:
 
     python -m docon.cli -i <file to be converted> --template <conversion template> -o <output>
-
-Or use the associated script:
-
 
 Installation instructions
 ------------------------------

@@ -1,0 +1,6 @@
+% set file = open_file(informat="raw")
+% set pref = "vamos"
+% for i in file:
+% set i = i.strip()
+{{ pref }} {{ i }}
+% endfor
