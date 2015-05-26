@@ -1,14 +1,19 @@
+import pip
 from setuptools import setup
 from pip.req import parse_requirements
 
 # parse_requirements() returns generator of pip.req.InstallRequirement objects
-install_reqs = parse_requirements("requirements.txt")
+# pip 6 introduces the *required* session argument
+try:
+    install_reqs = parse_requirements("requirements.txt", session=pip.download.PipSession())
+except AttributeError:
+    install_reqs = parse_requirements("requirements.txt")
 
 # reqs is a list of requirement
 # e.g. ['django==1.5.1', 'mezzanine==1.4.6']
 reqs = [str(ir.req) for ir in install_reqs]
 
-VERSION = "0.1.2"
+VERSION = "0.1.3"
 
 print(reqs)
 
