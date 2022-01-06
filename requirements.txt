@@ -10,7 +10,7 @@ SQLAlchemy==0.9.6
 WTForms==1.0.5
 argparse==1.2.1
 backports.ssl-match-hostname==3.4.0.2
-celery==3.1.13
+celery==5.2.2
 flask-mongoengine==0.7.0
 lxml==3.3.5
 mongoengine==0.8.7
